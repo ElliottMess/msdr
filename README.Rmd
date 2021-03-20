@@ -23,6 +23,7 @@ library(msdr)
 The goal of msdr is to provide conveniance functions to analyse [NOAA Significant Earthquakes dataset](https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search).
 
 The package contains three main sets of functions:
+
 1. Cleaning functions
 2. Plotting functions (in the form of [ggplot2](https://ggplot2.tidyverse.org/) geoms)
 3. Mapping functions
@@ -46,6 +47,7 @@ library(msdr)
 ## Cleaning functions
 
 There is two cleaning function:
+
 1. eq_location_clean()
 2. eq_clean_data()
 
@@ -63,6 +65,7 @@ test <- eq_clean_data(raw_noaa)
 
 ## Plotting functions
 Two plotting functions exist:
+
 1. geom_timeline
 2. geom_timeline_label
 
@@ -101,3 +104,28 @@ ggplot(data, aes(x = DATE, y = COUNTRY, fill = DEATHS)) +
                       mapping = aes(x = DATE, y = COUNTRY, label = LOCATION_NAME))
 
 ```
+## Mapping functions
+
+The mapping functions allows to explore on a map the datasets. There is two mapping functions:
+
+1. eq_map()
+2. eq_create_label()
+
+eq_map() creates maps based on the dataset provided, while eq_create_label() creates more informative label for eq_map.
+
+```{r eq_mapping}
+
+ eq_clean_data(raw_noaa) %>%
+     dplyr::filter(COUNTRY == "MEXICO" & lubridate::year(DATE) >= 2000) %>%
+     eq_map(annot_col = "DATE")
+```
+With labels:
+```{r eq_mapping_label}
+
+raw_noaa %>%
+  eq_clean_data() %>%
+  dplyr::filter(COUNTRY == "MEXICO" & lubridate::year(DATE) >= 2000) %>%
+  dplyr::mutate(popup_text = eq_create_label(.)) %>%
+  eq_map(annot_col = "popup_text")
+```
+

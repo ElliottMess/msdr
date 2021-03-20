@@ -68,9 +68,6 @@ display.}
 rather than combining with them. This is most useful for helper functions
 that define both data and aesthetics and shouldn't inherit behaviour from
 the default plot specification, e.g. \code{\link[ggplot2:borders]{borders()}}.}
-
-\item{n_max}{optional parameter allowing to subset the n_max largest
-earthquakes by magnitude.}
 }
 \value{
 Returns the geom for ggplot2 graphics
@@ -83,8 +80,6 @@ This geom adds a label to each data point that consists of a line and a text
 (for instance, the location of the earthquake) attached to each line.
 The x aesthetic provides the date vector for the timeline and label provides
 the labelling vector.
-The n_max optional parameter allows to subset the data with the n_max
-largest earthquakes by magnitude.
 }
 \examples{
 library(dplyr)

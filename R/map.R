@@ -49,8 +49,6 @@ eq_map <- function(data, annot_col = NULL){
 #'   dplyr::filter(COUNTRY == "MEXICO" & lubridate::year(DATE) >= 2000) %>%
 #'   dplyr::mutate(popup_text = eq_create_label(.)) %>%
 #'   eq_map(annot_col = "popup_text")
-
-
 eq_create_label <- function(data){
   data %>%
     dplyr::select(LOCATION_NAME, EQ_PRIMARY, TOTAL_DEATHS) %>%
