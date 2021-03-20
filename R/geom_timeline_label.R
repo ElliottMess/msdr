@@ -56,12 +56,6 @@ GeomTimelineLabel <- ggplot2::ggproto("GeomTimelineLabel", ggplot2::Geom,
 #' (for instance, the location of the earthquake) attached to each line.
 #' The x aesthetic provides the date vector for the timeline and label provides
 #' the labelling vector.
-#' The n_max optional parameter allows to subset the data with the n_max
-#' largest earthquakes by magnitude.
-#'
-#' @param n_max optional parameter allowing to subset the n_max largest
-#'     earthquakes by magnitude.
-#'
 #'
 #' @inheritParams ggplot2::geom_text
 #'

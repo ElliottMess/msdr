@@ -1,25 +1,22 @@
 ---
-output: github_document
+title: "msdr"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{msdr}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+  comment = "#>"
 )
 ```
+
 ```{r setup, echo=FALSE, message=FALSE}
 library(msdr)
 ```
-
-# msdr
-
-<!-- badges: start -->
-[![R-CMD-check](https://github.com/ElliottMess/msdr/workflows/R-CMD-check/badge.svg)](https://github.com/ElliottMess/msdr/actions)
-<!-- badges: end -->
-
 The goal of msdr is to provide conveniance functions to analyse [NOAA Significant Earthquakes dataset](https://www.ngdc.noaa.gov/hazel/view/hazards/earthquake/search).
 
 The package contains three main sets of functions:
