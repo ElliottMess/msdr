@@ -1,13 +1,9 @@
 
-    #> Warning: package 'dplyr' was built under R version 4.0.4
-    #> Warning: package 'lubridate' was built under R version 4.0.4
-    #> Warning: package 'leaflet' was built under R version 4.0.4
-
 # msdr
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/ElliottMess/msdr/workflows/R-CMD-check/badge.svg)](https://github.com/ElliottMess/msdr/actions)
+![build](https://travis-ci.org/ElliottMess/msdr.svg?branch=master)
 <!-- badges: end -->
 
 The goal of msdr is to provide conveniance functions to analyse [NOAA
