@@ -3,7 +3,7 @@
 
 <!-- badges: start -->
 
-![build](https://travis-ci.org/ElliottMess/msdr.svg?branch=master)
+\[![build](https://travis-ci.org/ElliottMess/msdr.svg?branch=master)\]\[<https://travis-ci.org/github/ElliottMess/msdr>\]
 <!-- badges: end -->
 
 The goal of msdr is to provide conveniance functions to analyse [NOAA
