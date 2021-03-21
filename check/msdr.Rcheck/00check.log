@@ -13,23 +13,27 @@ Maintainer: 'Elliott Messeiller <elliott.messeiller@gmail.com>'
 New submission
 
 The Title field should be in title case. Current version is:
-'A package to analyse NOAA Significant Earthquakes dataset'
+'Analyse NOAA Significant Earthquakes dataset'
 In title case that is:
-'A Package to Analyse NOAA Significant Earthquakes Dataset'
-
-The Description field should not start with the package name,
-  'This package' or similar.
+'Analyse NOAA Significant Earthquakes Dataset'
 * checking package namespace information ... OK
 * checking package dependencies ... NOTE
 Depends: includes the non-default packages:
-  'magrittr', 'dplyr', 'lubridate', 'stringr', 'ggplot2', 'leaflet',
-  'testthat'
+  'magrittr', 'tidyr', 'dplyr', 'lubridate', 'stringr', 'ggplot2',
+  'leaflet', 'testthat'
 Adding so many packages to the search path is excessive and importing
 selectively is preferable.
 * checking if this is a source package ... OK
 * checking if there is a namespace ... OK
 * checking for .dll and .exe files ... OK
-* checking for hidden files and directories ... OK
+* checking for hidden files and directories ... NOTE
+Found the following hidden files and directories:
+  .travis.yml
+These were most likely included in error. See section 'Package
+structure' in the 'Writing R Extensions' manual.
+
+CRAN-pack does not know about
+  .travis.yml
 * checking for portable file names ... OK
 * checking whether package 'msdr' can be installed ... OK
 * checking package directory ... OK
@@ -55,10 +59,9 @@ Non-standard files/directories found at top level:
 * checking whether the namespace can be unloaded cleanly ... OK
 * checking loading without being on the library search path ... OK
 * checking use of S3 registration ... OK
-* checking dependencies in R code ... WARNING
-'::' or ':::' import not declared from: 'tidyr'
+* checking dependencies in R code ... NOTE
 Packages in Depends field not imported from:
-  'dplyr' 'ggplot2' 'leaflet' 'lubridate' 'stringr' 'testthat'
+  'dplyr' 'ggplot2' 'leaflet' 'lubridate' 'stringr' 'testthat' 'tidyr'
   These packages need to be imported from (in the NAMESPACE file)
   for when this namespace is loaded but not attached.
 * checking S3 generic/method consistency ... OK
@@ -87,14 +90,7 @@ Undefined global functions or variables:
 * checking Rd metadata ... OK
 * checking Rd line widths ... OK
 * checking Rd cross-references ... OK
-* checking for missing documentation entries ... WARNING
-Undocumented code objects:
-  'raw_noaa'
-Undocumented data sets:
-  'raw_noaa'
-All user-level objects in a package should have documentation entries.
-See chapter 'Writing R documentation files' in the 'Writing R
-Extensions' manual.
+* checking for missing documentation entries ... OK
 * checking for code/documentation mismatches ... OK
 * checking Rd \usage sections ... OK
 * checking Rd contents ... OK
@@ -108,29 +104,12 @@ Extensions' manual.
 * checking files in 'vignettes' ... OK
 * checking examples ... OK
 * checking for unstated dependencies in 'tests' ... OK
-* checking tests ... ERROR
+* checking tests ... OK
   Running 'testthat.R'
-Running the tests in 'tests/testthat.R' failed.
-Last 13 lines of output:
-  Loading required package: leaflet
-  > 
-  > test_check("msdr")
-  == Failed tests ================================================================
-  -- Error (test-clean_data.R:45:3): Gets the right top 10 earthquakes -----------
-  Error: object 'top_10_eq' not found
-  Backtrace:
-      x
-   1. \-testthat::expect_equal(class(top_10_eq)[4], "data.frame") test-clean_data.R:45:2
-   2.   \-testthat::quasi_label(enquo(object), label, arg = "object")
-   3.     \-rlang::eval_bare(expr, quo_get_env(quo))
-  
-  [ FAIL 1 | WARN 0 | SKIP 0 | PASS 8 ]
-  Error: Test failures
-  Execution halted
 * checking for unstated dependencies in vignettes ... OK
 * checking package vignettes in 'inst/doc' ... OK
 * checking re-building of vignette outputs ... OK
 * checking for non-standard things in the check directory ... OK
 * checking for detritus in the temp directory ... OK
 * DONE
-Status: 1 ERROR, 3 WARNINGs, 5 NOTEs
+Status: 1 WARNING, 7 NOTEs

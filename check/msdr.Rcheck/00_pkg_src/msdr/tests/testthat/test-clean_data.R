@@ -42,7 +42,7 @@ test_that("Gets the right top 10 earthquakes",{
   # get top_eq results
   top_eq_10 <- top_eq(eq_clean_data(raw_noaa), n_max = 10)
 
-  expect_equal(class(top_10_eq)[4], "data.frame")
+  expect_equal(class(top_eq_10)[4], "data.frame")
 
 })
 

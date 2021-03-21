@@ -4,4 +4,6 @@ eq_clean_data           Clean raw NOAA data
 eq_create_label         Create informative labels for map
 eq_location_clean       Clean location names in raw NOAA data
 eq_map                  Map earthquakes
+raw_noaa                WASH Severity Classification (WSC) Analysis
+                        Plan (AP)
 top_eq                  Filter earthquakes by magnitude

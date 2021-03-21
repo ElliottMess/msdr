@@ -33,6 +33,14 @@ Type 'q()' to quit R.
 > ### * </HEADER>
 > library('msdr')
 Loading required package: magrittr
+Loading required package: tidyr
+
+Attaching package: 'tidyr'
+
+The following object is masked from 'package:magrittr':
+
+    extract
+
 Loading required package: dplyr
 
 Attaching package: 'dplyr'
@@ -61,6 +69,10 @@ Loading required package: testthat
 Attaching package: 'testthat'
 
 The following object is masked from 'package:dplyr':
+
+    matches
+
+The following object is masked from 'package:tidyr':
 
     matches
 
@@ -240,7 +252,7 @@ Warning: Removed 1 rows containing missing values (geom_timeline).
 > cleanEx()
 > options(digits = 7L)
 > base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
-Time elapsed:  6.53 0.81 10 NA NA 
+Time elapsed:  5.15 0.66 8.53 NA NA 
 > grDevices::dev.off()
 null device 
           1 
