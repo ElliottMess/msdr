@@ -22,6 +22,6 @@ A dataframe with the filtered data
 Filter the top n_max earthquakes according to their magnitude.
 }
 \examples{
-top_10 <- top_earthquakes(earthquake_data, 10)
+top_10 <- top_eq( eq_clean_data(raw_data), 10)
 
 }

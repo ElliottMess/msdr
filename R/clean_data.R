@@ -65,7 +65,7 @@ eq_location_clean <- function(raw_noaa_df){
 #' @export
 #'
 #' @examples
-#' top_10 <- top_earthquakes(earthquake_data, 10)
+#' top_10 <- top_eq( eq_clean_data(raw_data), 10)
 #'
 top_eq <- function(data, n_max = Inf, min_date = -Inf, max_date = Inf) {
   data %>%
